@@ -105,10 +105,6 @@ public class ViewController {
         tfSaida.setText(tela + add);
     }
 
-    public void onBtCancelarAction(){
-
-    }
-
     public void onBtSomarAction(){
         String oldTela = tfSaida.getText();
         long valornumero = Integer.parseInt(oldTela);
@@ -146,7 +142,7 @@ public class ViewController {
         operador = "x";
     }
 
-    public void onBtLimparAction(){
+    public void onBtCancelarAction(){
         tfSaida.setText("");
         lbEntrada.setText("");
         this.pnumero = 0;
@@ -156,7 +152,7 @@ public class ViewController {
     public void onBtCalcularAction(){
         switch (operador){
             case "+":
-                
+
                 String valor = tfSaida.getText();
                 this.snumero = Integer.parseInt(valor);
                 long system = this.pnumero + this.snumero;
@@ -168,7 +164,7 @@ public class ViewController {
 
                 String valorSub = tfSaida.getText();
                 this.snumero = Integer.parseInt(valorSub);
-                long systemSub = this.pnumero + this.snumero;
+                long systemSub = this.pnumero - this.snumero;
                 tfSaida.setText(String.valueOf(systemSub));
                 String entradaSub = lbEntrada.getText();
                 lbEntrada.setText(entradaSub + valorSub);
@@ -177,7 +173,7 @@ public class ViewController {
 
                 String valorMult = tfSaida.getText();
                 this.snumero = Integer.parseInt(valorMult);
-                long systemMult = this.pnumero + this.snumero;
+                long systemMult = this.pnumero * this.snumero;
                 tfSaida.setText(String.valueOf(systemMult));
                 String entradaMult = lbEntrada.getText();
                 lbEntrada.setText(entradaMult + valorMult);
@@ -186,7 +182,7 @@ public class ViewController {
 
                 String valorDiv = tfSaida.getText();
                 this.snumero = Integer.parseInt(valorDiv);
-                long systemDiv = this.pnumero + this.snumero;
+                long systemDiv = this.pnumero / this.snumero;
                 tfSaida.setText(String.valueOf(systemDiv));
                 String entradaDiv = lbEntrada.getText();
                 lbEntrada.setText(entradaDiv + valorDiv);
